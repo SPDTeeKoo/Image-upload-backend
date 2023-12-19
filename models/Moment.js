@@ -6,7 +6,7 @@ const momentSchema = new mongoose.Schema({
     maxlength: 100,
   },
   tags: [String],
-  image: String, // Storing path to the image file
+  image: String,
   // userId: {
   //   type: mongoose.Schema.Types.ObjectId,
   //   ref: 'User',

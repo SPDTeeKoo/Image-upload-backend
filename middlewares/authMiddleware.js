@@ -8,7 +8,7 @@ export const requireSignIn = (req, res, next) => {
       if (err) {
         res.status(401).json({ message: 'Unauthorized access' });
       } else {
-        req.user = decodedToken; // Set the user data in the request object
+        req.user = decodedToken;
         next();
       }
     });

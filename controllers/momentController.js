@@ -4,11 +4,11 @@ export const addMoment = async (req, res) => {
   try {
     const { comment, tags } = req.body;
     const imagePath = req.file ? req.file.path : null;
-    // const userId = req.user.id; // Assuming user ID is available in req.user after authentication
+    // const userId = req.user.id;
     // console.log(userId);
     const newMoment = new Moment({
       comment,
-      tags: tags.split(','), // Convert comma-separated tags to an array
+      tags: tags.split(','),
       image: imagePath,
       // userId,
     });
